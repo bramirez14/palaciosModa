@@ -1,32 +1,34 @@
-import React, { useEffect } from 'react'
-//import 'materialize-css/dist/css/materialize.min.css'
-import M from 'materialize-css'
+import React from 'react'
+import './navbar.css'
+import {Buttom} from './Buttom'
 
 
 export const Navbar = () => {
 
-
-  useEffect(() => {
-    var elems = document.querySelectorAll('.fixed-action-btn');
-    M.FloatingActionButton.init(elems, {
-      toolbarEnabled: true
-    });
-  }, []);
-
-
+      
+ 
   return (
-
-    <div className="fixed-action-btn toolbar">
-      <a className="btn-floating btn-large ">
-        <i className="large material-icons">menu</i>
-      </a>
-      <ul>
-        <li><a className="btn-floating "><i className="material-icons">insert_chart</i></a></li>
-        <li><a className="btn-floating "><i className="material-icons">format_quote</i></a></li>
-        <li><a className="btn-floating "><i className="material-icons">publish</i></a></li>
-        <li><a className="btn-floating "><i className="material-icons">attach_file</i></a></li>
-      </ul>
-    </div>
-
+    <>
+  
+    <nav class="nav">
+  <a href="#" class="nav__link">
+    <i class="material-icons nav__icon">Logo</i>
+    
+  </a>
+  <a href="#" class="nav__link nav__link--active">
+    <i class="material-icons nav__icon">local_grocery_store</i>
+  
+  </a>
+  
+  <a href="#" class="nav__link">
+    <i class="material-icons nav__icon">search</i>
+   {/*<span class="nav__text">Privacy</span>*/}
+  </a>
+  <a href="#" class="nav__link">
+  <Buttom/>
+  </a>
+   
+</nav>
+</>
   )
 }
