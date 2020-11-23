@@ -1,32 +1,33 @@
 import React from 'react'
 import './navbar.css'
 import {Buttom} from './Buttom'
+import {Link} from 'react-router-dom'
+import { ButtonDropdown } from '../search/ButtonDropdown'
+import { Search } from '../search/Search'
+import { useLocation } from "react-router-dom";
 
 
-export const Navbar = () => {
-
-      
- 
-  return (
+export const Navbar= ({history}) => {
+  return( 
     <>
   
-    <nav class="nav">
-  <a href="#" class="nav__link">
-    <i class="material-icons nav__icon">Logo</i>
+    <nav className="nav">
+  <Link to="/" className="nav__link">
+    <i className="material-icons nav__icon">Palacios Moda</i>
     
-  </a>
-  <a href="#" class="nav__link nav__link--active">
-    <i class="material-icons nav__icon">local_grocery_store</i>
+  </Link>
+  <Link to="/checkout" className="nav__link nav__link--active">
+   
   
-  </a>
+  </Link>
   
-  <a href="#" class="nav__link">
-    <i class="material-icons nav__icon">search</i>
-   {/*<span class="nav__text">Privacy</span>*/}
-  </a>
-  <a href="#" class="nav__link">
+  <Link to='#' className="nav__link">
+  <ButtonDropdown history={history} />
+   {/*<span className="nav__text">Privacy</span>*/}
+  </Link>
+  <Link to="#" className="nav__link">
   <Buttom/>
-  </a>
+  </Link>
    
 </nav>
 </>

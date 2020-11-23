@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-
+import { Link } from 'react-router-dom'
 import './buttom.css'
 
 export const Buttom = () => {
@@ -21,9 +21,9 @@ export const Buttom = () => {
 
     <>
       <div id="menu-toggle"  class="menu-toggle" onClick={handleClick}  >
-    <div class="bar1"></div>
-    <div class="bar2"></div>
-    <div class="bar3"></div>
+    <div className="bar1"></div>
+    <div className="bar2"></div>
+    <div className="bar3"></div>
   </div>
   {
     open==true && <div id="site-nav" class="site-nav"  >
@@ -31,10 +31,10 @@ export const Buttom = () => {
     <ul>
    
 
-      <li><a href="/products"><em class="fab fa-product-hunt site-nav--icon"></em>Productos</a></li>
-      <li><a href="/products"><em class="fas fa-skating site-nav--icon"></em>Deportes</a></li>
-      <li><a href="/products"><em class="fas fa-tags site-nav--icon"></em>Marcas</a></li>
-      <li class="faa"><a href="#"><em class=" fa fa-envelope site-nav--icon"></em>Contacto</a></li>
+      <li><Link to="/remeras">Productos</Link></li>
+      <li><Link to="/remeras">Deportes</Link></li>
+      <li><Link to="/remeras">Marcas</Link></li>
+      <li><Link to="#">Contacto</Link></li>
       
       
     </ul>
