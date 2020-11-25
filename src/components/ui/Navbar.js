@@ -3,14 +3,14 @@ import './navbar.css'
 import {Buttom} from './Buttom'
 import {Link} from 'react-router-dom'
 import { ButtonDropdown } from '../search/ButtonDropdown'
-import { Search } from '../search/Search'
+import { Card } from '../search/Card'
 import { useLocation } from "react-router-dom";
 
 
 export const Navbar= ({history}) => {
   return( 
     <>
-  
+  <Card/>
     <nav className="nav">
   <Link to="/" className="nav__link">
     <i className="material-icons nav__icon">Palacios Moda</i>

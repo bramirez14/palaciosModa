@@ -19,7 +19,7 @@ export const Search = ({ history }) => {
     const { searchText } = formValues;
     console.log(formValues)
     const productosFiltered = getByName( q )
-console.log(productosFiltered)
+localStorage.setItem('search',productosFiltered)
 
     const handleSearch = (e) => {
         e.preventDefault();
@@ -85,9 +85,10 @@ console.log(productosFiltered)
 
                     {
                         productosFiltered.map( producto=> (
-                            <Card 
+                            <Card history={history}
                                 key={ producto.id }
                                 { ...producto }
+                                
                             />
                         ))
                         }

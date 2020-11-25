@@ -23,8 +23,9 @@ import { CreateProduct } from '../components/crudProducts/CreateProduct';
 
 import { ReadProduct } from '../components/crudProducts/ReadProduct';
 import { UpdateProduct } from '../components/crudProducts/UpdateProduct';
-import { Search } from '../components/search/Search';
+import {Card} from '../components/search/Card'
 import { Navbar } from '../components/ui/Navbar';
+
 
 
 
@@ -43,9 +44,11 @@ export const Routers = () => {
                 <Route exact path="/vestidos" component={Vestidos} /> 
                 <Route exact path="/polleras_short" component={PollerasyShort} />  
                 <Route exact path="/checkout" component={Checkout}/>
-                <Route exact path="/search" component={Search}/> 
-		        <Route exact path="/lupa" component={ButtonDropdown} />
-		        <Route exact path="/navbar" component={Navbar}/>
+		        <Route exact path="/search/products" component={Navbar} />
+               <Route exact path="/lupa" component={ButtonDropdown} />
+               <Route exact path="/card" component={Card} />
+
+		     
 
 
 

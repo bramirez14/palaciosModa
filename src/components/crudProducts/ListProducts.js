@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { DeleteProduct } from "./DeleteProduct";
+
 import { Navbar, Nav, Table } from "react-bootstrap";
 
 

@@ -1,17 +1,16 @@
+
 import React from 'react'
 import { Navbar } from '../components/ui/Navbar'
-//import {Search} from './search/Search'
-import {ButtonDropdown} from './search/ButtonDropdown'
-
+import { Card } from './search/Card'
+import { getByName } from './search/getByName'
 
 export const Home = ({history}) => {
 
-  
-  console.log(history)
-   
-    return (
+ return (
         <div>
             <h1>LISTA DE PRODUCTOS</h1>
+      
+            
             {/*Mandar el history en las props es muy importante cuando usas esel buscador  */}
             
               <Navbar history={history}/>
