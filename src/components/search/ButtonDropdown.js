@@ -2,12 +2,8 @@ import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import "./dropdown.css";
-import { Search } from "./Search";
-import queryString from "query-string";
-import { useLocation } from "react-router-dom";
+
 import { useForm } from "../../hooks/useForm";
-import { getByName } from "./getByName";
-import { Card } from "./Card";
 
 export const ButtonDropdown = ({ history }) => {
   //Button

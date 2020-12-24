@@ -1,15 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
 import { Navbar, Nav, Table } from "react-bootstrap";
 
 
-export const ListProducts = ({ id, i, nombre, precio, deporte, image,onDelete }) => {
-  console.log(image, id, nombre, precio, deporte);
+export const ListProducts = ({ id, i, name, price, image,onDelete }) => {
+  console.log(image, id, name, price);
 
   return (
     <>
-     
       <Navbar bg="light" expand="lg">
         <Navbar.Brand href="/">Lista de productos</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -27,7 +25,7 @@ export const ListProducts = ({ id, i, nombre, precio, deporte, image,onDelete })
             <th>ID</th>
             <th>Image</th>
             <th>Nombre</th>
-            <th>Deporte</th>
+            
             <th>Precio</th>
             <th>Acciones</th>
           </tr>
@@ -38,12 +36,12 @@ export const ListProducts = ({ id, i, nombre, precio, deporte, image,onDelete })
             <td>
               <img src={image} />
             </td>
-            <td>{nombre}</td>
-            <td>{deporte}</td>
-            <td>${precio}</td>
+            <td>{name}</td>
+           
+            <td>${price}</td>
             <td>
               <Link
-                to={`/update/product/${id}`}
+                to={`/edit/${id}`}
                 className="btn btn-success mr-1"
                 role="button"
                 aria-pressed="true"

@@ -4,7 +4,7 @@ import {Buttom} from './Buttom'
 import {Link} from 'react-router-dom'
 import { ButtonDropdown } from '../search/ButtonDropdown'
 import { Card } from '../search/Card'
-import { useLocation } from "react-router-dom";
+
 
 
 export const Navbar= ({history}) => {
@@ -17,7 +17,7 @@ export const Navbar= ({history}) => {
     
   </Link>
   <Link to="/checkout" className="nav__link nav__link--active">
-   
+  <i class="fas fa-cart-arrow-down"></i>
   
   </Link>
   
