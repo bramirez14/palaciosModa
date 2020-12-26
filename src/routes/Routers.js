@@ -17,7 +17,6 @@ import { Checkout } from '../components/shoppingCart/Checkout';
 import { Home } from '../components/Home';
 import { ButtonDropdown} from '../components/search/ButtonDropdown';
 import { ReadProduct } from '../components/crudProducts/ReadProduct';
-import { UpdateProduct } from '../components/crudProducts/UpdateProduct';
 import { Card } from '../components/search/Card'
 import { Navbar } from '../components/ui/Navbar';
 import { Register } from '../components/login/Register';
@@ -25,11 +24,7 @@ import { Profile } from '../components/login/Profile';
 import { PrivateRoute } from './PrivateRoute';
 import { PublicRoute } from './PublicRoute';
 import { CreateProduct } from '../components/crudProducts/CreateProduct';
-
-
-
-
-
+import { UpdateProduct } from '../components/crudProducts/UpdateProduct.jsx'
 
 export const Routers = () => {
     return (
@@ -55,8 +50,10 @@ export const Routers = () => {
 		     
                 <Route exact path="/crud" component={ReadProduct}/> 
                 <Route exact path="/create" component={CreateProduct}/> 
-                <Route exact path="/edit/:id" component={ UpdateProduct}/> 
-                <Route exact path="/edit/2/:id" component={ UpdateProduct}/> 
+                <Route exact path="/edit/:id" component={ UpdateProduct }/> 
+
+                
+
 
                
 
